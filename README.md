@@ -98,7 +98,7 @@ nexsysSimMonitor
         └── User
             └── User.jsx
 ```
-# Golang (Back-end) Links:
+## Golang (Back-end) Links:
 - Homepage: <https://golang.org/>
 - Tutorial: <https://tour.golang.org/list>
 - Benefits of Go: <https://medium.com/exploring-code/why-should-you-learn-go-f607681fad65>
@@ -106,7 +106,7 @@ nexsysSimMonitor
 - Concurrency links: <https://tour.golang.org/concurrency/11>
 - Best Golang reference: <https://gobyexample.com/>
 
-# React (Front-end) Links:
+## React (Front-end) Links:
 - Homepage: <https://reactjs.org/>
 - Getting Started: <https://reactjs.org/docs/getting-started.html>
 - React-Bootstrap Documentation: <https://react-bootstrap.github.io/>

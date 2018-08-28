@@ -98,7 +98,7 @@ nexsysSimMonitor
         └── User
             └── User.jsx
 ```
-#Golang (Back-end) Links:
+# Golang (Back-end) Links:
 - Homepage: <https://golang.org/>
 - Tutorial: <https://tour.golang.org/list>
 - Benefits of Go: <https://medium.com/exploring-code/why-should-you-learn-go-f607681fad65>
@@ -106,7 +106,7 @@ nexsysSimMonitor
 - Concurrency links: <https://tour.golang.org/concurrency/11>
 - Best Golang reference: <https://gobyexample.com/>
 
-#React (Front-end) Links:
+# React (Front-end) Links:
 - Homepage: <https://reactjs.org/>
 - Getting Started: <https://reactjs.org/docs/getting-started.html>
 - React-Bootstrap Documentation: <https://react-bootstrap.github.io/>
@@ -114,6 +114,6 @@ nexsysSimMonitor
 - Example Project: <https://medium.freecodecamp.org/how-to-build-a-react-js-chat-app-in-10-minutes-c9233794642b>
 - Quick Introduction: <https://medium.freecodecamp.org/learn-react-js-in-5-minutes-526472d292f4>
 
-# Contacts:
+## Contacts:
 - Daniel Delago: ddelago0596@gmail.com, daniel.b.delago@nasa.gov
 - Paul Bielski: paul.bielski@nasa.gov

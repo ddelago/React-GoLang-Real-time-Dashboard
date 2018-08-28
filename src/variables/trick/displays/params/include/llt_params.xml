@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Dummy>
+  <!-- Define dcapp parameters for Rover Sim -->
+  <Variable Type="Float">LLT_RELPOR_X_POS</Variable>
+  <Variable Type="Float">LLT_RELPOR_Y_POS</Variable>
+  <Variable Type="Float">LLT_RELPOR_Z_POS</Variable>
+  <Variable Type="Float">LLT_RELPOR_X_VEL</Variable>
+  <Variable Type="Float">LLT_RELPOR_Y_VEL</Variable>
+  <Variable Type="Float">LLT_RELPOR_Z_VEL</Variable>
+  <Variable Type="Float">LLT_RELPOR_R_ATT</Variable>
+  <Variable Type="Float">LLT_RELPOR_P_ATT</Variable>
+  <Variable Type="Float">LLT_RELPOR_Y_ATT</Variable>
+  <Variable Type="Float">LLT_RELPOR_R_RATE</Variable>
+  <Variable Type="Float">LLT_RELPOR_P_RATE</Variable>
+  <Variable Type="Float">LLT_RELPOR_Y_RATE</Variable>
+  <Variable Type="Float">LLT_POR_RANGE</Variable>
+  <Variable Type="Float">LLT_POR_RANGE_RATE</Variable>
+
+  <Variable Type="Integer" InitialValue="1">LLT_OVERLAY_VISIBLE</Variable>
+  <Variable Type="Integer" InitialValue="1">LLT_MENU_VISIBLE</Variable>
+  <Variable Type="Integer">LLT_GRAPHICS_ACTIVE</Variable>
+  <Variable Type="Integer">LLT_SIM_CONNECTED</Variable>
+  <Variable Type="Integer">LLT_SIM_MODE</Variable>
+</Dummy>

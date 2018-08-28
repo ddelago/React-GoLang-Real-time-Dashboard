@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Dummy>
+    <TrickVariable Name="SAL_door_port.state">SAL_DOOR_STATE</TrickVariable>
+    <TrickVariable Name="SAL_door_port.hinge_angle" Units="degree">SAL_DOOR_ANGLE</TrickVariable>
+    <TrickVariable Name="SAL_door_port_tray.trayState">SAL_TRAY_STATE</TrickVariable>
+    <TrickVariable Name="SAL_door_port_tray.trayExtension">SAL_TRAY_EXTENSION</TrickVariable>
+    <TrickVariable Name="robotCoordinator.coordinator.payloads[0].payloadExternalControlID">PAYLOAD_0_LOCATION_IND</TrickVariable>
+    <TrickVariable Name="robotCoordinator.coordinator.payloads[0].captureStatus">PAYLOAD_0_CAPTURE_STATUS</TrickVariable>
+    <TrickVariable Name="robotCoordinator.coordinator.payloads[1].payloadExternalControlID">PAYLOAD_1_LOCATION_IND</TrickVariable>
+    <TrickVariable Name="robotCoordinator.coordinator.payloads[1].captureStatus">PAYLOAD_1_CAPTURE_STATUS</TrickVariable>
+    <TrickVariable Name="robotCoordinator.coordinator.payloads[2].payloadExternalControlID">PAYLOAD_2_LOCATION_IND</TrickVariable>
+    <TrickVariable Name="robotCoordinator.coordinator.payloads[2].captureStatus">PAYLOAD_2_CAPTURE_STATUS</TrickVariable>
+    <TrickVariable Name="robotCoordinator.coordinator.payloads[3].payloadExternalControlID">PAYLOAD_3_LOCATION_IND</TrickVariable>
+    <TrickVariable Name="robotCoordinator.coordinator.payloads[3].captureStatus">PAYLOAD_3_CAPTURE_STATUS</TrickVariable>
+    <TrickVariable Name="NextSTEPArm.sequencer.gfPayloadID">PAYLOAD_ID</TrickVariable>
+</Dummy>

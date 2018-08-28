@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ToEdge>
+
+  <!-- Lights/Cameras/HUD Display Parameters -->
+  <If Value="#CameraPageActive">
+    <EdgeVariable RcsCommand="doug.view #EdgeDisp set -camera">CAMERA_SELECT</EdgeVariable>
+    <EdgeVariable RcsCommand="doug.node LightMPCVDP set -lit_int">MPCV_DP_LIGHT_CMD</EdgeVariable>
+    <EdgeVariable RcsCommand="doug.node LightHABDP set -lit_int">HAB_DP_LIGHT_CMD</EdgeVariable>
+    <EdgeVariable RcsCommand="doug.node IDEAL_LIGHTING set -flags">IDEAL_LIGHTING</EdgeVariable>
+  </If>
+
+</ToEdge>

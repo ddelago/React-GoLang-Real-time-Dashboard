@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Dummy>
+    <Button Style="TopBezelButton" X="#t1x" Y="#ty" Variable="@ACTIVE_DISPLAY" On="18" BezelKey="#t1">
+        <On><Rectangle Style="TopBezelButton" FillColor="#ButtonOn"/></On>
+        <Off><Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/></Off>
+        <String Style="TopBezelButton">Power\nSources</String>
+    </Button>
+    <Button Style="TopBezelButton" X="#t2x" Y="#ty" Variable="@ACTIVE_DISPLAY" On="19" BezelKey="#t2">
+        <On><Rectangle Style="TopBezelButton" FillColor="#ButtonOn"/></On>
+        <Off><Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/></Off>
+        <String Style="TopBezelButton">PDU1</String>
+    </Button>
+    <Button Style="TopBezelButton" X="#t3x" Y="#ty" Variable="@ACTIVE_DISPLAY" On="23" BezelKey="#t3">
+        <On><Rectangle Style="TopBezelButton" FillColor="#ButtonOn"/></On>
+        <Off><Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/></Off>
+        <String Style="TopBezelButton">PDU2</String>
+    </Button>
+    <Button Style="TopBezelButton" X="#t6x" Y="#ty" BezelKey="#t6">
+        <Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/>
+        <Image Width="38" Height="52" HorizontalAlign="Center" VerticalAlign="Middle">${dcappDisplayHome}/modules/nexsys_common/images/up.tga</Image>
+        <OnPress>
+            <Set Variable="@SUBMENU6_DISPLAY">@ACTIVE_DISPLAY</Set>
+            <Set Variable="@ACTIVE_DISPLAY">@SUBMENU5_DISPLAY</Set>
+        </OnPress>
+    </Button>
+</Dummy>

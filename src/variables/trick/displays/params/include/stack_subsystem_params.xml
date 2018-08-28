@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Dummy>
+
+  <!-- ********** Airlock Display Variable ********** -->
+  <Include>airlock_params.xml</Include>
+  <Include>hal_airlock_params.xml</Include>
+
+
+  <!-- ********** MPCV Subsystem Variables ********** -->
+  <Include>${dcappDisplayHome}/modules/mpcv/params/mpcv_ars_params.xml</Include>
+
+  <Constant Name="PARAM_SIM_PRE_NAME">ORION</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/pcs_params.xml</Include>
+
+
+  <!-- ********** HAB subsystem variables ********** -->
+  <!-- HAB system alarm Display Variables -->
+  <Constant Name="PARAM_SIM_PRE_NAME">HAB</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/subsystem_alarm_params.xml</Include>
+
+  <!-- HAB Subsystem Overiview -->
+  <Include>${dcappDisplayHome}/modules/hab/params/hab_subs_overview_params.xml</Include>
+
+  <!-- HAB AMPS Display Variables -->
+  <Constant Name="PARAM_SIM_PRE_NAME">HAB_AMPS</Constant>
+  <Include>${dcappDisplayHome}/modules/amps/params/amps_params.xml</Include>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/magic_power_params.xml</Include>
+
+  <!-- Basic Water Display Variables -->
+  <Include>${dcappDisplayHome}/modules/hab/params/water_params.xml</Include>
+
+  <!-- HAB TCS Variables -->
+  <Include>hab_tcs_params.xml</Include>
+
+  <!-- ARS Display Variables -->
+  <Include>${dcappDisplayHome}/modules/hab/params/hab_cal_params.xml</Include>
+  <Include>${dcappDisplayHome}/modules/hab/params/eam_ars_params.xml</Include>
+
+  <!-- HAB PCS Display Variables -->
+  <Constant Name="PARAM_SIM_PRE_NAME">EAM</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/pcs_params.xml</Include>
+
+
+  <!-- ********** HAL subsystem variables ********** -->
+  <!-- HAL system alarm Display Variables -->
+  <Constant Name="PARAM_SIM_PRE_NAME">HAL</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/subsystem_alarm_params.xml</Include>
+
+  <!-- HAL Subsystem Overiview -->
+  <Include>${dcappDisplayHome}/modules/hal/params/hal_subs_overview_params.xml</Include>
+
+  <!-- HAL AMPS Display Variables -->
+  <Constant Name="PARAM_SIM_PRE_NAME">HAL_AMPS</Constant>
+  <Include>${dcappDisplayHome}/modules/amps/params/amps_params.xml</Include>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/magic_power_params.xml</Include>
+
+  <!-- HAL Potable Water -->
+  <Include>${dcappDisplayHome}/modules/hal/params/hal_potablewater_params.xml</Include>
+
+  <!-- HAL Waste Water -->
+  <Include>${dcappDisplayHome}/modules/hal/params/hal_wastewater_params.xml</Include>
+
+  <!-- HAL Thermal Control System -->
+  <Include>${dcappDisplayHome}/modules/hal/params/hal_tcs_params.xml</Include>
+
+  <!-- HAL ARS -->
+  <Include>${dcappDisplayHome}/modules/hal/params/hal_ars_params.xml</Include>
+
+  <!-- HAL ARS RCA -->
+  <Include>${dcappDisplayHome}/modules/hal/params/hal_ars_rca_params.xml</Include>
+
+  <!-- HAL PCS Display Variables -->
+  <Constant Name="PARAM_SIM_PRE_NAME">HAL</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/pcs_params.xml</Include>
+
+
+  <!-- ********** Crew Display Variables ********** -->
+  <Include>${dcappDisplayHome}/modules/subsystems/params/crew_params.xml</Include>
+</Dummy>

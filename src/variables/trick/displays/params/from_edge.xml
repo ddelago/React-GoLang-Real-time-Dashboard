@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<FromEdge>
+    <EdgeVariable RcsCommand="doug.node SIM_CONNECTED get -x">GRAPHICS_ACTIVE</EdgeVariable>
+
+    <!-- Lights/Cameras/HUD Display Parameters -->
+    <If Value="#CameraPageActive">
+      <EdgeVariable RcsCommand="doug.view #EdgeDisp get -camera">ACTIVE_CAMERA</EdgeVariable>
+      <EdgeVariable RcsCommand="doug.node LightMPCVDP get -lit_int">MPCV_DP_LIGHT_LEVEL</EdgeVariable>
+      <EdgeVariable RcsCommand="doug.node LightHABDP get -lit_int">HAB_DP_LIGHT_LEVEL</EdgeVariable>
+    </If>
+    
+</FromEdge>

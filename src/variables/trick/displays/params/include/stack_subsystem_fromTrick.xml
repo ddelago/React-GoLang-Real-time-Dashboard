@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<Dummy>
+
+  <!-- ********** Airlock Display Variable ********** -->
+  <If Operator="eq" Value1="#AirlockModuleName" Value2="HAL">
+    <True>
+      <Constant Name="PARAM_SIM_PRE_NAME">HAL</Constant>
+      <Include>hal_airlock_fromTrick.xml</Include>
+    </True>
+    <False>
+      <Constant Name="PARAM_SIM_PRE_NAME">AIRLOCK</Constant>
+      <Include>airlock_fromTrick.xml</Include>
+    </False>
+  </If>
+
+
+  <!-- ********** MPCV Subsystem Variables ********** -->
+  <Include>${dcappDisplayHome}/modules/mpcv/params/mpcv_ars_fromTrick.xml</Include>
+
+  <!-- MPCV PCS to trick parameter mapping -->
+  <Constant Name="PARAM_SIM_PRE_NAME">ORION</Constant>
+  <Constant Name="TRICK_SIM_PRE_NAME">mpcv_subsystems.fswIf.tlm.eclss.pcs</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/pcs_fromTrick.xml</Include>
+
+
+  <!-- ********** HAB subsystem variables ********** -->
+  <!-- HAB subsystem warning mapping -->
+  <Constant Name="PARAM_SIM_PRE_NAME">HAB</Constant>
+  <Constant Name="TRICK_SIM_PRE_NAME">hab_subsystems.fswIf.tlm.system_alarm</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/subsystem_alarm_fromTrick.xml</Include>
+  <Include>${dcappDisplayHome}/modules/hab/params/hab_subs_overview_fromTrick.xml</Include>
+
+  <!-- HAB AMPS trick-dcapp mapping -->
+  <Constant Name="PARAM_SIM_PRE_NAME">HAB_AMPS</Constant>
+  <Constant Name="TRICK_SIM_PRE_NAME">hab_amps_fsw.amps_fsw_io.AmpsTlm</Constant>
+  <Include>${dcappDisplayHome}/modules/amps/params/amps_fromTrick.xml</Include>
+  <Constant Name="TRICK_SIM_PRE_NAME">hab_subsystems.fswIf.tlm.eps.magicPower</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/magic_power_fromTrick.xml</Include>
+
+  <!-- Basic water display variable -->
+  <Include>${dcappDisplayHome}/modules/hab/params/water_fromTrick.xml</Include>
+
+  <!-- Thermal control system variables -->
+  <Include>${dcappDisplayHome}/modules/hab/params/itcs_fromTrick.xml</Include>
+
+  <Constant Name="PARAM_SIM_PRE_NAME">ETCSA</Constant>
+  <Constant Name="TRICK_SIM_PRE_NAME">hab_subsystems.fswIf.tlm.tcs.etcsA</Constant>
+  <Include>${dcappDisplayHome}/modules/hab/params/etcs_fromTrick.xml</Include>
+
+  <Constant Name="PARAM_SIM_PRE_NAME">ETCSB</Constant>
+  <Constant Name="TRICK_SIM_PRE_NAME">hab_subsystems.fswIf.tlm.tcs.etcsB</Constant>
+  <Include>${dcappDisplayHome}/modules/hab/params/etcs_fromTrick.xml</Include>
+
+  <!-- ARS Display Variables -->
+  <Include>${dcappDisplayHome}/modules/hab/params/hab_cal_fromTrick.xml</Include>
+  <Include>${dcappDisplayHome}/modules/hab/params/eam_ars_fromTrick.xml</Include>
+
+  <!-- HAB PCS from trick parameter mapping -->
+  <Constant Name="PARAM_SIM_PRE_NAME">EAM</Constant>
+  <Constant Name="TRICK_SIM_PRE_NAME">hab_subsystems.fswIf.tlm.eclss.pcs</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/pcs_fromTrick.xml</Include>
+
+
+  <!-- ********** HAL subsystem variables ********** -->
+  <If Operator="eq" Value1="#AirlockModuleName" Value2="HAL">
+    <!-- HAB subsystem warning mapping -->
+    <Constant Name="PARAM_SIM_PRE_NAME">HAL</Constant>
+    <Constant Name="TRICK_SIM_PRE_NAME">hal_subsystems.fswIf.tlm.system_alarm</Constant>
+    <Include>${dcappDisplayHome}/modules/subsystems/params/subsystem_alarm_fromTrick.xml</Include>
+
+    <!-- HAL AMPS trick-dcapp mapping -->
+    <Constant Name="PARAM_SIM_PRE_NAME">HAL_AMPS</Constant>
+    <Constant Name="TRICK_SIM_PRE_NAME">hal_amps_fsw.amps_fsw_io.AmpsTlm</Constant>
+    <Include>${dcappDisplayHome}/modules/amps/params/amps_fromTrick.xml</Include>
+
+    <!-- include HAL parameter from Trick -->
+    <Constant Name="PARAM_SIM_PRE_NAME">HAL</Constant>
+    <Include>${dcappDisplayHome}/modules/hal/params/hal_subs_overview_fromTrick.xml</Include>
+    <Include>${dcappDisplayHome}/modules/hal/params/hal_potablewater_fromTrick.xml</Include>
+    <Include>${dcappDisplayHome}/modules/hal/params/hal_wastewater_fromTrick.xml</Include>
+    <Include>${dcappDisplayHome}/modules/hal/params/hal_tcs_fromTrick.xml</Include>
+    <Include>${dcappDisplayHome}/modules/hal/params/hal_ars_fromTrick.xml</Include>
+    <Include>${dcappDisplayHome}/modules/hal/params/hal_ars_rca_fromTrick.xml</Include>
+
+    <!-- HAL PCS from trick parameter mapping -->
+    <Constant Name="PARAM_SIM_PRE_NAME">HAL</Constant>
+    <Constant Name="TRICK_SIM_PRE_NAME">hal_subsystems.fswIf.tlm.eclss.pcs</Constant>
+    <Include>${dcappDisplayHome}/modules/subsystems/params/pcs_fromTrick.xml</Include>
+  </If>
+
+  <!-- ********** Crew Display Variables ********** -->
+  <Include>${dcappDisplayHome}/modules/subsystems/params/crew_fromTrick.xml</Include>
+</Dummy>
+
+
+mpcv_hab_air
+hab_hal_air
+mpcv_pcs
+hab_overview
+hab_power_amps
+hab_power_ps
+hab_power_mbsu
+hab_power_pdu12
+hab_power_pdu34
+hab_water
+hab_tcs_itcs
+hab_tcs_etcsA
+hab_tcs_etcsB
+hab_air_cal
+hab_air_ars
+hab_air_pcs
+hal_overview
+hal_power_amps
+hal_power_ps
+hal_power_mbsu
+hal_power_pdu12
+hal_power_pdu34
+hal_water_potable
+hal_water_waste
+hal_tcs
+hal_air_cal
+hal_air_ars
+hal_air_pcs
+crew

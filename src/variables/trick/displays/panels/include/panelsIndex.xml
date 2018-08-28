@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Dummy>
+    <!-- ************* MPCV GNC ************* -->
+    <Constant Name="MpcvGncDisplay">1</Constant>
+
+    <!-- ******** Proposion module (PM) GNC ******** -->
+    <Constant Name="PmGncDisplay">2</Constant>
+
+    <!-- *************** Robotics & Doors *************** -->
+    <!-- Robotis Display Index -->
+    <Constant Name="RoboticArmDisplayIndex">3</Constant>
+    <!-- Doors Display Index -->
+    <Constant Name="DoorsDisplayIndex">34</Constant>
+
+    <!-- ******************** Subsystems ******************** -->
+    <!-- Docking Display Index -->
+    <Constant Name="StackDockingDisplay">17</Constant>
+    <!-- HAL Cabin Display Index -->
+    <Constant Name="AirlockCabinDisplay">13</Constant>
+
+    <!-- MPCV Subsystem display index -->
+    <Constant Name="MpcvPcsDisplay">305</Constant>
+
+    <!-- HAB Subsystem display index -->
+    <Constant Name="HabSubsystemOverviewDisplay">132</Constant>
+    <Constant Name="HabAmspOverviewDisplay">101</Constant>
+    <Constant Name="HabAmpsPsDisplay">102</Constant>
+    <Constant Name="HabAmpsMbsuDisplay">103</Constant>
+    <Constant Name="HabAmpsPduDisplay">104</Constant>
+    <Constant Name="HabAmpsPdu2Display">106</Constant>
+    <Constant Name="HabWaterDisplay">21</Constant>
+    <Constant Name="HabItcsDisplay">26</Constant>
+    <Constant Name="HabEtcsADisplay">27</Constant>
+    <Constant Name="HabEtcsBDisplay">28</Constant>
+    <Constant Name="HabArsDisplay">10</Constant>
+    <Constant Name="HabPcsDisplay">105</Constant>
+    <Constant Name="HabCalDisplay">107</Constant>
+
+    <!-- HAL Subsystem display index -->
+    <Constant Name="HalSubsystemOverviewDisplay">32</Constant>
+    <Constant Name="HalAmspOverviewDisplay">201</Constant>
+    <Constant Name="HalAmpsPsDisplay">202</Constant>
+    <Constant Name="HalAmpsMbsuDisplay">203</Constant>
+    <Constant Name="HalAmpsPduDisplay">204</Constant>
+    <Constant Name="HalAmpsPdu2Display">206</Constant>
+    <Constant Name="HalPotableWaterDisplay">211</Constant>
+    <Constant Name="HalWasteWaterDisplay">33</Constant>
+    <Constant Name="HalTcsDisplay">31</Constant>
+    <Constant Name="HalArsDisplay">30</Constant>
+    <Constant Name="HalPcsDisplay">205</Constant>
+    <Constant Name="HalArsRcaDisplay">207</Constant>
+
+    <!-- Crew display index -->
+    <Constant Name="CrewDisplay">15</Constant>
+
+    <!-- *************** Cameras & Lights *************** -->
+    <Constant Name="CameraSelectDisplay">4</Constant>
+    <Constant Name="TelescopeDisplay">35</Constant>
+    <Constant Name="AerCamControlDisplay">6</Constant>
+    <Constant Name="MpcvLightsControlDisplay">7</Constant>
+
+    <!-- *************** Remote Operations *************** -->
+    <Constant Name="RoverSimDisplayIndex">1801</Constant>
+    <Constant Name="LltSimDisplayIndex">1901</Constant>
+
+
+    <!-- ******************** unused display ******************** -->
+    <Constant Name="RangeFineder1Display">5</Constant>
+    <Constant Name="RangeFineder1Display">8</Constant>
+
+</Dummy>

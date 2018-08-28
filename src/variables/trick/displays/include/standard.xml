@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Dummy>
+    <If Operator="eq" Value1="#SubsystemsType" Value2="eam">
+        <True>
+            <Constant Name="InitialSubsystemDisplay">10</Constant>
+        </True>
+        <False>
+            <Constant Name="InitialSubsystemDisplay">11</Constant>
+        </False>
+    </If>
+
+    <Constant Name="RangeFinderSlow">0.009</Constant> <!-- 0.009 rad/sec = 0.5 deg/sec -->
+    <Constant Name="RangeFinderMedium">0.035</Constant> <!-- 0.035 rad/sec = 2.0 deg/sec -->
+    <Constant Name="RangeFinderFast">0.140</Constant> <!-- 0.140 rad/sec = 8.0 deg/sec -->
+
+    <Include>../params/global.xml</Include>
+    <If Value="#UeiActive">
+        <UEI Host="#UeiHost" Port="#UeiPort" BezelID="#UeiID"/>
+    </If>
+    <If Value="#CanBusActive">
+        <CAN Network="#CanNetwork" ButtonID="#CanButtonId" ControlID="1282" InhibitVariable="@CANBUS_INHIBITED"/>
+    </If>
+    <If Value="#TrickIoActive">
+        <TrickIo Host="#TrickHost" Port="#TrickPort" DataRate="0.1" ConnectedVariable="@SIM_CONNECTED" DisconnectAction="#TrickDisconnectAction">
+            <Include>../params/from_trick.xml</Include>
+            <If Value="#ViewOnly">
+                <False><Include>../params/to_trick.xml</Include></False>
+            </If>
+        </TrickIo>
+    </If>
+    <If Value="#EdgeIoActive">
+        <EdgeIo Host="#EdgeHost" Port="#EdgePort" DataRate="1.0">
+            <Include>../params/from_edge.xml</Include>
+            <If Value="#ViewOnly">
+                <False><Include>../params/to_edge.xml</Include></False>
+            </If>
+        </EdgeIo>
+    </If>
+    <DisplayLogic>${dcappDisplayHome}/logic/${dcappBINDIR}/logic.so</DisplayLogic>
+    <Window X="#WindowXPos" Y="#WindowYPos" Width="#WindowWidth" Height="#WindowHeight" FullScreen="#FullScreen" ActiveDisplay="@ACTIVE_DISPLAY" ForceUpdate="2">
+        <Include>../panels/displays.xml</Include>
+    </Window>
+</Dummy>

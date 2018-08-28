@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Panel DisplayIndex="#MpcvGncDisplay" BackgroundColor="#BgColor" VirtualWidth="#PanelWidth" VirtualHeight="#PanelHeight">
+    <Constant Name="PARAM_SIM_PRE_NAME">MPCV</Constant>
+    <Constant Name="CMGActive">0</Constant>
+    <Constant Name="ControlEffectorRcs">2</Constant>
+    <Include>${dcappDisplayHome}/modules/nexsys_common/panels/gnc_mode.xml</Include>
+    <Include>${dcappDisplayHome}/modules/nexsys_common/panels/generic_gnc.xml</Include>
+
+    <If Operator="eq" Value1="@#{PARAM_SIM_PRE_NAME}_GNC_SUBDISPLAY" Value2="#GncMainDisplay">
+        <If Value="@KEYPAD_ACTIVE">
+            <False>
+                <Button Style="CornerBezelButton" X="#lx" Y="#l8y" SwitchVariable="@REMOTE_HC_MODE_CMD" IndicatorVariable="@REMOTE_HC_MODE_STATUS" On="1" BezelKey="#l8">
+                    <On><Rectangle Style="CornerBezelButton" FillColor="#ButtonOn"/></On>
+                    <Transition><Rectangle Style="CornerBezelButton" FillColor="#ButtonTrans"/></Transition>
+                    <Off><Rectangle Style="CornerBezelButton" FillColor="#ButtonOff"/></Off>
+                    <String Style="CornerBezelButton">Grab HC\nFocus</String>
+                </Button>
+                <Button Style="CornerBezelButton" Type="Toggle" X="#rx" Y="#r8y" SwitchVariable="@#{PARAM_SIM_PRE_NAME}_AUTO_DOCK_CMD" IndicatorVariable="@#{PARAM_SIM_PRE_NAME}_AUTO_DOCK_IND" On="1" BezelKey="#r8">
+                    <On><Rectangle Style="CornerBezelButton" FillColor="#ButtonOn"/></On>
+                    <Transition><Rectangle Style="CornerBezelButton" FillColor="#ButtonTrans"/></Transition>
+                    <Off><Rectangle Style="CornerBezelButton" FillColor="#ButtonOff"/></Off>
+                    <String Style="CornerBezelButton">Rendezvous</String>
+                </Button>
+                <!-- Top Bezel -->
+                <Include>include/mainDisplayTopMenu.xml</Include>
+            </False>
+        </If>
+    </If>
+
+    <Include>${dcappDisplayHome}/modules/nexsys_common/panels/standard_elements.xml</Include>
+</Panel>

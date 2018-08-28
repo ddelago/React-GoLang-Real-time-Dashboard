@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Dummy>
+  <!-- Define dcapp parameters for Rover Sim -->
+  <Variable Type="Float">ROVER_RELPOR_X_POS</Variable>
+  <Variable Type="Float">ROVER_RELPOR_Y_POS</Variable>
+  <Variable Type="Float">ROVER_RELPOR_Z_POS</Variable>
+  <Variable Type="Float">ROVER_RELPOR_X_VEL</Variable>
+  <Variable Type="Float">ROVER_RELPOR_Y_VEL</Variable>
+  <Variable Type="Float">ROVER_RELPOR_Z_VEL</Variable>
+  <Variable Type="Float">ROVER_LF_WHEEL_RATE</Variable>
+  <Variable Type="Float">ROVER_LR_WHEEL_RATE</Variable>
+  <Variable Type="Float">ROVER_RF_WHEEL_RATE</Variable>
+  <Variable Type="Float">ROVER_RR_WHEEL_RATE</Variable>
+  <Variable Type="Float">ROVER_POR_RANGE</Variable>
+  <Variable Type="Float">ROVER_POR_RANGE_RATE</Variable>
+  <Variable Type="Float">ROVER_CAMERA_PAN</Variable>
+  <Variable Type="Float">ROVER_CAMERA_TILT</Variable>
+  <Variable Type="Float">ROVER_CAMERA_ZOOM</Variable>
+  <Variable Type="Integer">ROVER_CAMERA_RESET_CMD</Variable>
+  <Variable Type="Integer">ROVER_CAMERA_RESET_IND</Variable>
+  <Variable Type="Float">ROVER_LATITUDE</Variable>
+  <Variable Type="Float">ROVER_LONGTITUDE</Variable>
+  <Variable Type="Float">ROVER_ALTITUDE</Variable>
+
+  <Variable Type="Integer">ROVER_CRUISE_CONTROL_IND</Variable>
+  <Variable Type="Integer" InitialValue="1">ROVER_OVERLAY_VISIBLE</Variable>
+  <Variable Type="Integer" InitialValue="1">ROVER_MENU_VISIBLE</Variable>
+  <Variable Type="Integer">ROVER_GRAPHICS_ACTIVE</Variable>
+  <Variable Type="Integer">ROVER_SIM_CONNECTED</Variable>
+  <Variable Type="Integer">ROVER_SIM_MODE</Variable>
+</Dummy>

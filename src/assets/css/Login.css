@@ -1,0 +1,31 @@
+.Grid {
+	/*margin-top: 260px;*/
+  background: url("../img/NASA-Background.svg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-box {
+	  float: none;
+    margin: 0 auto;
+   	padding-top: 40px;
+  	padding-bottom: 30px;
+    /*background-color: white;*/
+}
+
+/*.Grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.login-box {
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+}*/

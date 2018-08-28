@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Dummy>
+
+  <TrickVariable Name="hab_subsystems.fswIf.nominalCmd.eclss.cabin.deckHatch.openFlag">HAL_TO_EAM_HATCH_OPEN_CMD</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.nominalCmd.eclss.cabin.hatch3.openFlag">HAL_HATCH_OPEN_CMD</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.nominalCmd.eclss.cabin.evaHatch.openFlag">HAL_TO_SPACE_HATCH_OPEN_CMD</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.nominalCmd.eclss.cabin.IVValve.openFlag">HAL_IV_VALVE_OPEN_CMD</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.nominalCmd.eclss.cabin.IVHatch.openFlag">HAL_IV_HATCH_OPEN_CMD</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.nominalCmd.eclss.cabin.manualVentValve.openFlag">HAL_TO_SPACE_MAN_VENT_POS_CMD</TrickVariable>
+
+</Dummy>

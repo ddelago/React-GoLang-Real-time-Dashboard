@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Dummy>
+    <Variable Type="Integer">MPCV_DP_LIGHT_SELECTED</Variable>
+    <Variable Type="Float">MPCV_DP_LIGHT_CMD</Variable>
+    <Variable Type="Float">MPCV_DP_LIGHT_LEVEL</Variable>
+    <Variable Type="Float">MPCV_DP_LIGHT_DELTA</Variable>
+    <Variable Type="Float">MPCV_DP_LIGHT_PCTON</Variable>
+
+    <Variable Type="Integer">HAB_DP_LIGHT_SELECTED</Variable>
+    <Variable Type="Float">HAB_DP_LIGHT_CMD</Variable>
+    <Variable Type="Float">HAB_DP_LIGHT_LEVEL</Variable>
+    <Variable Type="Float">HAB_DP_LIGHT_DELTA</Variable>
+    <Variable Type="Float">HAB_DP_LIGHT_PCTON</Variable>
+
+    <Variable Type="Integer">SELECTED_LIGHTS_ON</Variable>
+    <Variable Type="Integer">SELECTED_LIGHTS_OFF</Variable>
+    <Variable Type="Integer">SELECTED_LIGHTS_BRIGHTABLE</Variable>
+    <Variable Type="Integer">SELECTED_LIGHTS_DIMMABLE</Variable>
+    <Variable Type="Integer" InitialValue="1">SHOW_LIGHT_LEVELS</Variable>
+
+    <Variable Type="String" InitialValue="!HIGHLIGHT">IDEAL_LIGHTING</Variable>
+</Dummy>

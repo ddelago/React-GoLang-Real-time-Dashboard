@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Dummy>
+    <Button Style="CornerBezelButton" X="#lx" Y="#l1y" BezelKey="#l1">
+        <Rectangle Style="CornerBezelButton" FillColor="#ButtonOff"/>
+        <Image Width="46" Height="52" HorizontalAlign="Center" VerticalAlign="Middle">${dcappDisplayHome}/modules/nexsys_common/images/home.tga</Image>
+        <OnPress>
+            <Set Variable="@SUBMENU11_DISPLAY">@ACTIVE_DISPLAY</Set>
+            <Set Variable="@ACTIVE_DISPLAY">@SUBMENU1_DISPLAY</Set>
+        </OnPress>
+    </Button>
+    
+    <Button Style="TopBezelButton" X="#t1x" Y="#ty" Variable="@ACTIVE_DISPLAY" On="#HalArsDisplay" BezelKey="#t1">
+        <On><Rectangle Style="TopBezelButton" FillColor="#ButtonOn"/></On>
+        <Off><Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/></Off>
+        <String Style="TopBezelButton">CAL</String>
+    </Button>
+
+    <Button Style="TopBezelButton" X="#t2x" Y="#ty" Variable="@ACTIVE_DISPLAY" On="#HalArsRcaDisplay" BezelKey="#t2">
+        <On><Rectangle Style="TopBezelButton" FillColor="#ButtonOn"/></On>
+        <Off><Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/></Off>
+        <String Style="TopBezelButton">ARS</String>
+    </Button>
+
+    <Button Style="TopBezelButton" X="#t3x" Y="#ty" Variable="@ACTIVE_DISPLAY" On="#HalPcsDisplay" BezelKey="#t3">
+        <On><Rectangle Style="TopBezelButton" FillColor="#ButtonOn"/></On>
+        <Off><Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/></Off>
+        <String Style="TopBezelButton">PCS</String>
+    </Button>
+    
+    <Button Style="CornerBezelButton" X="#rx" Y="#r1y" BezelKey="#r1">
+        <Rectangle Style="CornerBezelButton" FillColor="#ButtonOff"/>
+        <Image Width="38" Height="52" HorizontalAlign="Center" VerticalAlign="Middle">${dcappDisplayHome}/modules/nexsys_common/images/up.tga</Image>
+        <OnPress>
+            <Set Variable="@SUBMENU11_DISPLAY">@ACTIVE_DISPLAY</Set>
+            <Set Variable="@ACTIVE_DISPLAY">@HAL_SUBSYSTEM_DISPLAY</Set>
+        </OnPress>
+    </Button>
+
+    <Set Variable="@MENU_LABEL">Subsystems &gt; HAL Subsystem &gt; Air Systems</Set>
+</Dummy>

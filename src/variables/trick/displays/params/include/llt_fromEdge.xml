@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<FromEdge>
+    <EdgeVariable RcsCommand="doug.node SIM_CONNECTED get -x">LLT_GRAPHICS_ACTIVE</EdgeVariable>
+</FromEdge>

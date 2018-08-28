@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Dummy>
+
+  <!-- AMPS overview panel-->
+  <Panel DisplayIndex="#HalAmspOverviewDisplay" BackgroundColor="#BgColor" VirtualWidth="#PanelWidth" VirtualHeight="#PanelHeight">
+    <Include>${dcappDisplayHome}/modules/amps/panels/amps_overview.xml</Include>
+    <Include>include/halAmpsTopMenu.xml</Include>
+    <!-- <Constant Name="MagicPowerOverviewX">1350</Constant>
+    <Constant Name="MagicPowerOverviewY">214</Constant>
+    <Include>${dcappDisplayHome}/modules/subsystems/panels/magic_power.xml</Include> -->
+  </Panel>
+
+  <!-- Power Source panel-->
+  <Panel DisplayIndex="#HalAmpsPsDisplay" BackgroundColor="#BgColor" VirtualWidth="#PanelWidth" VirtualHeight="#PanelHeight">
+    <Include>${dcappDisplayHome}/modules/amps/panels/power_source.xml</Include>
+    <Include>include/halAmpsTopMenu.xml</Include>
+  </Panel>
+
+  <!-- MBSU display panel -->
+  <Panel DisplayIndex="#HalAmpsMbsuDisplay" BackgroundColor="#BgColor" VirtualWidth="#PanelWidth" VirtualHeight="#PanelHeight">
+    <Include>${dcappDisplayHome}/modules/amps/panels/mbsu.xml</Include>
+    <Include>include/halAmpsTopMenu.xml</Include>
+  </Panel>
+
+  <!-- PDU display panel -->
+  <Panel DisplayIndex="#HalAmpsPduDisplay" BackgroundColor="#BgColor" VirtualWidth="#PanelWidth" VirtualHeight="#PanelHeight">
+    <!-- Load that connects to PDU 1 -->
+    <Constant Name="AmpsLoadElementX">640</Constant>
+    <Constant Name="AmpsLoadElementY">460</Constant>
+    <Constant Name="PARAM_MODEL_PRE_NAME">PDU1</Constant>
+    <Include>vehicle_load/hal_pdu1_load.xml</Include>
+    <!-- Load that connects to PDU 2 -->
+    <Constant Name="AmpsLoadElementX">1240</Constant>
+    <Constant Name="AmpsLoadElementY">460</Constant>
+    <Constant Name="PARAM_MODEL_PRE_NAME">PDU2</Constant>
+    <Include>vehicle_load/hal_pdu2_load.xml</Include>
+
+    <Include>${dcappDisplayHome}/modules/amps/panels/pdu.xml</Include>
+
+    <!-- Top Bezel -->
+    <Include>include/halAmpsTopMenu.xml</Include>
+  </Panel>
+
+    <!-- Extra PDU -->
+  <Panel DisplayIndex="#HalAmpsPdu2Display" BackgroundColor="#BgColor" VirtualWidth="#PanelWidth" VirtualHeight="#PanelHeight">
+    <!-- Load that connects to PDU 3 -->
+    <Constant Name="AmpsLoadElementX">640</Constant>
+    <Constant Name="AmpsLoadElementY">460</Constant>
+    <Constant Name="AmpsPduElementX">500</Constant>
+    <Constant Name="AmpsPduElementY">590</Constant>
+    <Constant Name="PARAM_MODEL_PRE_NAME">PDU3</Constant>
+    <Include>vehicle_load/hal_pdu3_load.xml</Include>
+    <Include>${dcappDisplayHome}/modules/amps/panels/include/amps_pdu.xml</Include>
+    <Constant Name="PduButtonLocation">Left</Constant>
+    <If Operator="eq" Value1="#EnableCmd" Value2="1">
+      <Include>${dcappDisplayHome}/modules/amps/panels/include/amps_pdu_cmd.xml</Include>
+    </If>
+
+    <!-- Load that connects to PDU 4 -->
+    <Constant Name="AmpsLoadElementX">1240</Constant>
+    <Constant Name="AmpsLoadElementY">460</Constant>
+    <Constant Name="AmpsPduElementX">1100</Constant>
+    <Constant Name="AmpsPduElementY">590</Constant>
+    <Constant Name="PARAM_MODEL_PRE_NAME">PDU4</Constant>
+    <Include>vehicle_load/hal_pdu4_load.xml</Include>
+    <Include>${dcappDisplayHome}/modules/amps/panels/include/amps_pdu.xml</Include>
+    <Constant Name="PduButtonLocation">Right</Constant>
+    <If Operator="eq" Value1="#EnableCmd" Value2="1">
+      <Include>${dcappDisplayHome}/modules/amps/panels/include/amps_pdu_cmd.xml</Include>
+    </If>
+
+    <!-- Top Bezel -->
+    <Include>include/halAmpsTopMenu.xml</Include>
+  </Panel>
+</Dummy>

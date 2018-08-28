@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Dummy>
+  <Variable Type="Integer">TELESCOPE_MODE_CMD</Variable>
+  <Variable Type="Integer">TELESCOPE_MODE_IND</Variable>
+  <Variable Type="Integer">TELESCOPE_AZIMUTH_CMD</Variable>
+  <Variable Type="Integer">TELESCOPE_ELEVATION_CMD</Variable>
+  <Variable Type="Integer">TELESCOPE_ZOOM_CMD</Variable>
+  <Variable Type="Integer">TELESCOPE_MANUAL_MODE_ACTIVE</Variable>
+  <Variable Type="Integer">TELESCOPE_OBJECT_CMD</Variable>
+  <Variable Type="Integer">TELESCOPE_OBJECT_IND</Variable>
+
+
+  <Variable Type="Float">TELESCOPE_AZIMUTH_IND</Variable>
+  <Variable Type="Float">TELESCOPE_ELEVATION_IND</Variable>
+  <Variable Type="Float">TELESCOPE_ZOOM_IND</Variable>
+  <Variable Type="Float">TELESCOPE_AZIMUTH_INPUT</Variable>
+  <Variable Type="Float">TELESCOPE_ELEVATION_INPUT</Variable>
+  <Variable Type="Float">TELESCOPE_ZOOM_INPUT</Variable>
+  <Variable Type="String">TELESCOPE_AZIMUTH_INPUT_STR</Variable>
+  <Variable Type="String">TELESCOPE_ELEVATION_INPUT_STR</Variable>
+  <Variable Type="String">TELESCOPE_ZOOM_INPUT_STR</Variable>
+  <Variable Type="Integer">TELESCOPE_SET_ZOOM</Variable>
+  <Variable Type="Float">TIME_TO_METEOROID_IMPACT</Variable>
+</Dummy>

@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<Dummy>
+    <If Value="@CAMERA_FULLSCREEN">
+        <True>
+            <Include>${dcappDisplayHome}/modules/nexsys_common/panels/pixelstreams.xml</Include>
+            <Button Style="CornerBezelButton" X="#rx" Y="#r8y" Variable="@CAMERA_FULLSCREEN" On="0" BezelKey="#r8">
+                <Image>${dcappDisplayHome}/modules/nexsys_common/images/translucent.tga</Image>
+                <String Style="CornerBezelButton" Color="#OverlayText" ShadowOffset="4">Exit\nFull\nScreen</String>
+            </Button>
+        </True>
+        <False>
+            <Container X="#DisplayX" Y="#DisplayY" Width="#DisplayWidth" Height="#DisplayHeight">
+                <Include>${dcappDisplayHome}/modules/nexsys_common/panels/pixelstreams.xml</Include>
+                <Container X="10" Y="10" Width="360" Height="136">
+                    <Image>${dcappDisplayHome}/modules/nexsys_common/images/translucent.tga</Image>
+                    <String Style="Overlay" X="10" Y="90">Azimuth:</String>
+                    <String Style="Overlay" X="-10" Y="90" HorizontalAlign="Right">@TELESCOPE_AZIMUTH_IND(%.2f)°</String>
+                    <String Style="Overlay" X="10" Y="50">Elevation:</String>
+                    <String Style="Overlay" X="-10" Y="50" HorizontalAlign="Right">@TELESCOPE_ELEVATION_IND(%.2f)°</String>
+                    <String Style="Overlay" X="10" Y="10">Zoom:</String>
+                    <String Style="Overlay" X="-10" Y="10" HorizontalAlign="Right">@TELESCOPE_ZOOM_IND(%.3f)</String>
+                </Container>
+
+                <Container X="-10" Y="-10" Width="360" Height="46" HorizontalAlign="Right" VerticalAlign="Top">
+                    <Image>${dcappDisplayHome}/modules/nexsys_common/images/translucent.tga</Image>
+                    <String Style="Overlay" X="10" VerticalAlign="Middle">Time to Impact:</String>
+                    <String Style="Overlay" X="-10" HorizontalAlign="Right" VerticalAlign="Middle">@TIME_TO_METEOROID_IMPACT(%.1f)</String>
+                </Container>
+            </Container>
+
+            <If Value="@KEYPAD_ACTIVE">
+                <True>
+                    <!-- Top Bezel -->
+                    <If Operator="eq" Value1="@KEYPAD_ID" Value2="1">
+                        <Button Style="TopBezelButton" X="#t1x" Y="#ty" Variable="@FIELD_SELECT" On="1" Key="x" BezelKey="#t1">
+                            <On><Rectangle Style="TopBezelButton" FillColor="#ButtonOn"/></On>
+                            <Off><Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/></Off>
+                            <String Style="TopBezelButton">Modify\nAzimuth</String>
+                        </Button>
+                        <Button Style="TopBezelButton" X="#t2x" Y="#ty" Variable="@FIELD_SELECT" On="2" Key="y" BezelKey="#t2">
+                            <On><Rectangle Style="TopBezelButton" FillColor="#ButtonOn"/></On>
+                            <Off><Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/></Off>
+                            <String Style="TopBezelButton">Modify\nElevation</String>
+                        </Button>
+                    </If>
+                    <Button Style="TopBezelButton" X="#t5x" Y="#ty" BezelKey="#t5">
+                        <Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/>
+                        <String Style="TopBezelButton">Apply</String>
+                        <OnPress>
+                            <If Operator="eq" Value1="@KEYPAD_ID" Value2="1">
+                                <Set Variable="@TELESCOPE_AZIMUTH_INPUT">@TELESCOPE_AZIMUTH_INPUT_STR</Set>
+                                <Set Variable="@TELESCOPE_ELEVATION_INPUT">@TELESCOPE_ELEVATION_INPUT_STR</Set>
+                                <Set Variable="@TELESCOPE_MODE_CMD">3</Set>
+                            </If>
+                            <If Operator="eq" Value1="@KEYPAD_ID" Value2="2">
+                                <Set Variable="@TELESCOPE_ZOOM_INPUT">@TELESCOPE_ZOOM_INPUT_STR</Set>
+                                <Set Variable="@TELESCOPE_SET_ZOOM">1</Set>
+                            </If>
+                            <Set Variable="@FIELD_SELECT">0</Set>
+                            <Set Variable="@KEYPAD_ACTIVE">0</Set>
+                            <Set Variable="@KEYPAD_ID">0</Set>
+                        </OnPress>
+                    </Button>
+                    <Button Style="TopBezelButton" X="#t6x" Y="#ty" BezelKey="#t6">
+                        <Rectangle Style="TopBezelButton" FillColor="#ButtonOff"/>
+                        <String Style="TopBezelButton">Cancel</String>
+                        <OnPress>
+                            <Set Variable="@FIELD_SELECT">0</Set>
+                            <Set Variable="@KEYPAD_ACTIVE">0</Set>
+                            <Set Variable="@KEYPAD_ID">0</Set>
+                        </OnPress>
+                    </Button>
+
+                    <!-- Include Keypad -->
+                    <Include>${dcappDisplayHome}/modules/nexsys_common/panels/keypad.xml</Include>
+
+                    <If Operator="eq" Value1="@KEYPAD_ID" Value2="1">
+                        <Container X="#DisplayX" Y="#DisplayY" Width="#DisplayWidth" Height="#DisplayHeight">
+                            <Container X="-10" Y="10" Width="485" Height="130" HorizontalAlign="Right">
+                                <Image>${dcappDisplayHome}/modules/nexsys_common/images/translucent.tga</Image>
+                                <Container X="15" Y="70" Width="455" Height="50">
+                                    <String Style="Overlay" X="0" VerticalAlign="Middle">Azimuth:</String>
+                                    <Button Type="Standard" Width="380" HorizontalAlign="Right" VerticalAlign="Middle" Variable="@FIELD_SELECT" On="1">
+                                        <On><Image Width="260" HorizontalAlign="Right" VerticalAlign="Middle">${dcappDisplayHome}/modules/nexsys_common/images/textfieldSelect40x6.tga</Image></On>
+                                        <Off><Image Width="260" HorizontalAlign="Right" VerticalAlign="Middle">${dcappDisplayHome}/modules/nexsys_common/images/textfield40x6.tga</Image></Off>
+                                        <String X="370" HorizontalAlign="Right" VerticalAlign="Middle" Color="0 0 0">@TELESCOPE_AZIMUTH_INPUT_STR</String>
+                                    </Button>
+                                </Container>
+                                <Container X="15" Y="10" Width="455" Height="50">
+                                    <String Style="Overlay" X="0" VerticalAlign="Middle">Elevation:</String>
+                                    <Button Type="Standard" Width="380" HorizontalAlign="Right" VerticalAlign="Middle" Variable="@FIELD_SELECT" On="2">
+                                        <On><Image Width="260" HorizontalAlign="Right" VerticalAlign="Middle">${dcappDisplayHome}/modules/nexsys_common/images/textfieldSelect40x6.tga</Image></On>
+                                        <Off><Image Width="260" HorizontalAlign="Right" VerticalAlign="Middle">${dcappDisplayHome}/modules/nexsys_common/images/textfield40x6.tga</Image></Off>
+                                        <String X="370" HorizontalAlign="Right" VerticalAlign="Middle" Color="0 0 0">@TELESCOPE_ELEVATION_INPUT_STR</String>
+                                    </Button>
+                                </Container>
+                            </Container>
+                        </Container>
+                    </If>
+                    <If Operator="eq" Value1="@KEYPAD_ID" Value2="2">
+                        <Container X="#DisplayX" Y="#DisplayY" Width="#DisplayWidth" Height="#DisplayHeight">
+                            <Container X="-10" Y="10" Width="485" Height="70" HorizontalAlign="Right">
+                                <Image>${dcappDisplayHome}/modules/nexsys_common/images/translucent.tga</Image>
+                                <Container X="15" Y="10" Width="455" Height="50">
+                                    <String Style="Overlay" X="0" VerticalAlign="Middle">Zoom:</String>
+                                    <Container Width="380" HorizontalAlign="Right" VerticalAlign="Middle">
+                                        <Image Width="260" HorizontalAlign="Right" VerticalAlign="Middle">${dcappDisplayHome}/modules/nexsys_common/images/textfieldSelect40x6.tga</Image>
+                                        <String X="370" HorizontalAlign="Right" VerticalAlign="Middle" Color="0 0 0">@TELESCOPE_ZOOM_INPUT_STR</String>
+                                    </Container>
+                                </Container>
+                            </Container>
+                        </Container>
+                    </If>
+                </True>
+                <False>
+                    <!-- Bottom Bezel -->
+                    <Button Style="BottomBezelButton" Type="Momentary" X="#b1x" Y="#by" Variable="@TELESCOPE_AZIMUTH_CMD" On="1" Off="0" ActiveVariable="@TELESCOPE_MANUAL_MODE_ACTIVE" BezelKey="#b1">
+                        <On><Rectangle Style="BottomBezelButton" FillColor="#ButtonOn"/></On>
+                        <Off><Rectangle Style="BottomBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="BottomBezelButton">Pan\nLeft</String>
+                        <Inactive><String Style="BottomBezelButton" Color="#Inactive">Pan\nLeft</String></Inactive>
+                    </Button>
+                    <Button Style="BottomBezelButton" Type="Momentary" X="#b2x" Y="#by" Variable="@TELESCOPE_AZIMUTH_CMD" On="-1" Off="0" ActiveVariable="@TELESCOPE_MANUAL_MODE_ACTIVE" BezelKey="#b2">
+                        <On><Rectangle Style="BottomBezelButton" FillColor="#ButtonOn"/></On>
+                        <Off><Rectangle Style="BottomBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="BottomBezelButton">Pan\nRight</String>
+                        <Inactive><String Style="BottomBezelButton" Color="#Inactive">Pan\nRight</String></Inactive>
+                    </Button>
+                    <Button Style="BottomBezelButton" Type="Momentary" X="#b3x" Y="#by" Variable="@TELESCOPE_ELEVATION_CMD" On="1" Off="0" ActiveVariable="@TELESCOPE_MANUAL_MODE_ACTIVE" BezelKey="#b3">
+                        <On><Rectangle Style="BottomBezelButton" FillColor="#ButtonOn"/></On>
+                        <Off><Rectangle Style="BottomBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="BottomBezelButton">Tilt\nUp</String>
+                        <Inactive><String Style="BottomBezelButton" Color="#Inactive">Tilt\nUp</String></Inactive>
+                    </Button>
+                    <Button Style="BottomBezelButton" Type="Momentary" X="#b4x" Y="#by" Variable="@TELESCOPE_ELEVATION_CMD" On="-1" Off="0" ActiveVariable="@TELESCOPE_MANUAL_MODE_ACTIVE" BezelKey="#b4">
+                        <On><Rectangle Style="BottomBezelButton" FillColor="#ButtonOn"/></On>
+                        <Off><Rectangle Style="BottomBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="BottomBezelButton">Tilt\nDown</String>
+                        <Inactive><String Style="BottomBezelButton" Color="#Inactive">Tilt\nDown</String></Inactive>
+                    </Button>
+                    <Button Style="BottomBezelButton" Type="Momentary" X="#b5x" Y="#by" Variable="@TELESCOPE_ZOOM_CMD" On="1" Off="0" BezelKey="#b5">
+                        <On><Rectangle Style="BottomBezelButton" FillColor="#ButtonOn"/></On>
+                        <Off><Rectangle Style="BottomBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="BottomBezelButton">Zoom\nIn</String>
+                    </Button>
+                    <Button Style="BottomBezelButton" Type="Momentary" X="#b6x" Y="#by" Variable="@TELESCOPE_ZOOM_CMD" On="-1" Off="0" BezelKey="#b6">
+                        <On><Rectangle Style="BottomBezelButton" FillColor="#ButtonOn"/></On>
+                        <Off><Rectangle Style="BottomBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="BottomBezelButton">Zoom\nOut</String>
+                    </Button>
+
+                    <!-- Left Bezel -->
+                     <Button Style="LeftBezelButton" X="#lx" Y="#l4y" SwitchVariable="@TELESCOPE_MODE_CMD" IndicatorVariable="@TELESCOPE_MODE_IND" On="1" BezelKey="#l4">
+                        <On><Rectangle Style="LeftBezelButton" FillColor="#ButtonOn"/></On>
+                        <Transition><Rectangle Style="LeftBezelButton" FillColor="#ButtonTrans"/></Transition>
+                        <Off><Rectangle Style="LeftBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="LeftBezelButton">Auto</String>
+                    </Button>
+                     <Button Style="LeftBezelButton" X="#lx" Y="#l5y" SwitchVariable="@TELESCOPE_MODE_CMD" IndicatorVariable="@TELESCOPE_MODE_IND" On="2" BezelKey="#l5">
+                        <On><Rectangle Style="LeftBezelButton" FillColor="#ButtonOn"/></On>
+                        <Transition><Rectangle Style="LeftBezelButton" FillColor="#ButtonTrans"/></Transition>
+                        <Off><Rectangle Style="LeftBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="LeftBezelButton">Manual</String>
+                    </Button>
+                    <Button Style="LeftBezelButton" X="#lx" Y="#l6y" BezelKey="#l6">
+                        <If Operator="eq" Value1="@TELESCOPE_MODE_IND" Value2="3">
+                            <True>
+                                <Rectangle Style="LeftBezelButton" FillColor="#ButtonOn"/>
+                            </True>
+                            <False>
+                                <Rectangle Style="LeftBezelButton" FillColor="#ButtonOff"/>
+                            </False>
+                        </If>
+                        <String Style="LeftBezelButton">Set\nAngle...</String>
+                        <OnPress>
+                            <Set Variable="@KEYPAD_ACTIVE">1</Set>
+                            <Set Variable="@KEYPAD_ID">1</Set>
+                        </OnPress>
+                    </Button>
+                    <Button Style="LeftBezelButton" Type="Momentary" X="#lx" Y="#l7y" BezelKey="#l7">
+                        <On><Rectangle Style="LeftBezelButton" FillColor="#ButtonOn"/></On>
+                        <Off><Rectangle Style="LeftBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="LeftBezelButton">Set\nZoom...</String>
+                        <OnPress>
+                            <Set Variable="@KEYPAD_ACTIVE">1</Set>
+                            <Set Variable="@KEYPAD_ID">2</Set>
+                        </OnPress>
+                    </Button>
+                    <Button Style="CornerBezelButton" X="#lx" Y="#l8y" SwitchVariable="@REMOTE_HC_MODE_CMD" IndicatorVariable="@REMOTE_HC_MODE_STATUS" On="7" BezelKey="#l8">
+                        <On><Rectangle Style="CornerBezelButton" FillColor="#ButtonOn .8"/></On>
+                        <Transition><Rectangle Style="CornerBezelButton" FillColor="#ButtonTrans .8"/></Transition>
+                        <Off><Rectangle Style="CornerBezelButton" FillColor="#ButtonOff .8"/></Off>
+                        <String Style="CornerBezelButton">Grab HC\nFocus</String>
+                    </Button>
+
+
+                    <!-- Right Bezel -->
+                     <Button Style="RightBezelButton" X="#rx" Y="#r3y" SwitchVariable="@TELESCOPE_OBJECT_CMD" IndicatorVariable="@TELESCOPE_OBJECT_IND" On="1" BezelKey="#r3">
+                        <On><Rectangle Style="RightBezelButton" FillColor="#ButtonOn"/></On>
+                        <Transition><Rectangle Style="RightBezelButton" FillColor="#ButtonTrans"/></Transition>
+                        <Off><Rectangle Style="LeftBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="LeftBezelButton">Sun</String>
+                    </Button>
+                     <Button Style="LeftBezelButton" X="#rx" Y="#r4y" SwitchVariable="@TELESCOPE_OBJECT_CMD" IndicatorVariable="@TELESCOPE_OBJECT_IND" On="2" BezelKey="#r4">
+                        <On><Rectangle Style="RightBezelButton" FillColor="#ButtonOn"/></On>
+                        <Transition><Rectangle Style="RightBezelButton" FillColor="#ButtonTrans"/></Transition>
+                        <Off><Rectangle Style="RightBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="RightBezelButton">Earth</String>
+                    </Button>
+                     <Button Style="LeftBezelButton" X="#rx" Y="#r5y" SwitchVariable="@TELESCOPE_OBJECT_CMD" IndicatorVariable="@TELESCOPE_OBJECT_IND" On="3" BezelKey="#r5">
+                        <On><Rectangle Style="RightBezelButton" FillColor="#ButtonOn"/></On>
+                        <Transition><Rectangle Style="RightBezelButton" FillColor="#ButtonTrans"/></Transition>
+                        <Off><Rectangle Style="RightBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="RightBezelButton">Moon</String>
+                    </Button>
+                     <Button Style="LeftBezelButton" X="#rx" Y="#r6y" SwitchVariable="@TELESCOPE_OBJECT_CMD" IndicatorVariable="@TELESCOPE_OBJECT_IND" On="0" BezelKey="#r6">
+                        <On><Rectangle Style="RightBezelButton" FillColor="#ButtonOn"/></On>
+                        <Transition><Rectangle Style="RightBezelButton" FillColor="#ButtonTrans"/></Transition>
+                        <Off><Rectangle Style="RightBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="RightBezelButton">Meteroid</String>
+                    </Button>
+                     <Button Style="LeftBezelButton" X="#rx" Y="#r7y" SwitchVariable="@TELESCOPE_OBJECT_CMD" IndicatorVariable="@TELESCOPE_OBJECT_IND" On="4" BezelKey="#r7">
+                        <On><Rectangle Style="RightBezelButton" FillColor="#ButtonOn"/></On>
+                        <Transition><Rectangle Style="RightBezelButton" FillColor="#ButtonTrans"/></Transition>
+                        <Off><Rectangle Style="RightBezelButton" FillColor="#ButtonOff"/></Off>
+                        <String Style="RightBezelButton">MPCV</String>
+                    </Button>
+
+
+                    <Button Style="CornerBezelButton" X="#rx" Y="#r8y" Variable="@CAMERA_FULLSCREEN" On="1" BezelKey="#r8">
+                        <Rectangle Style="CornerBezelButton" FillColor="#ButtonOff"/>
+                        <String Style="CornerBezelButton">Full\nScreen</String>
+                    </Button>
+                </False>
+            </If>
+        </False>
+    </If>
+
+</Dummy>

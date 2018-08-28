@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Dummy>
+   <Container X="#AmpsLoadElementX" Y="#AmpsLoadElementY" HorizontalAlign="Center" VerticalAlign="Middle" Width="250" Height="580">
+
+     <Constant Name="LoadElementX">0</Constant>
+     <Constant Name="LoadElementY">490</Constant>
+     <Constant Name="LoadElementName">#{PARAM_SIM_PRE_NAME}_#{PARAM_MODEL_PRE_NAME}_RPC01</Constant>
+     <Constant Name="LoadElementLabel">Ovhd\nAft IMV</Constant>
+     <Constant Name="LoadElementGraphic">valve</Constant>
+     <Include>load_element.xml</Include>
+
+     <Constant Name="LoadElementX">0</Constant>
+     <Constant Name="LoadElementY">420</Constant>
+     <Constant Name="LoadElementName">#{PARAM_SIM_PRE_NAME}_#{PARAM_MODEL_PRE_NAME}_RPC02</Constant>
+     <Constant Name="LoadElementLabel">Deck\nFwd IMV</Constant>
+     <Constant Name="LoadElementGraphic">valve</Constant>
+     <Include>load_element.xml</Include>
+
+     <Constant Name="LoadElementX">0</Constant>
+     <Constant Name="LoadElementY">350</Constant>
+     <Constant Name="LoadElementName">#{PARAM_SIM_PRE_NAME}_#{PARAM_MODEL_PRE_NAME}_RPC03</Constant>
+     <Constant Name="LoadElementLabel">Deck\nAft IMV</Constant>
+     <Constant Name="LoadElementGraphic">valve</Constant>
+     <Include>load_element.xml</Include>
+
+     <Constant Name="LoadElementX">0</Constant>
+     <Constant Name="LoadElementY">280</Constant>
+     <Constant Name="LoadElementName">#{PARAM_SIM_PRE_NAME}_#{PARAM_MODEL_PRE_NAME}_RPC04</Constant>
+     <Constant Name="LoadElementLabel">PCS\nVent</Constant>
+     <Constant Name="LoadElementGraphic">valve</Constant>
+     <Include>load_element.xml</Include>
+
+     <Constant Name="LoadElementX">0</Constant>
+     <Constant Name="LoadElementY">210</Constant>
+     <Constant Name="LoadElementName">#{PARAM_SIM_PRE_NAME}_#{PARAM_MODEL_PRE_NAME}_RPC05</Constant>
+     <Constant Name="LoadElementLabel">N2 Low\nSol Valve</Constant>
+     <Constant Name="LoadElementGraphic">sol_valve</Constant>
+     <Include>load_element.xml</Include>
+
+     <Constant Name="LoadElementX">0</Constant>
+     <Constant Name="LoadElementY">140</Constant>
+     <Constant Name="LoadElementName">#{PARAM_SIM_PRE_NAME}_#{PARAM_MODEL_PRE_NAME}_RPC06</Constant>
+     <Constant Name="LoadElementLabel">N2 High\nSol Valve</Constant>
+     <Constant Name="LoadElementGraphic">sol_valve</Constant>
+     <Include>load_element.xml</Include>
+
+     <Constant Name="LoadElementX">0</Constant>
+     <Constant Name="LoadElementY">70</Constant>
+     <Constant Name="LoadElementName">#{PARAM_SIM_PRE_NAME}_#{PARAM_MODEL_PRE_NAME}_RPC07</Constant>
+     <Constant Name="LoadElementLabel">O2 Low\nSol Valve</Constant>
+     <Constant Name="LoadElementGraphic">sol_valve</Constant>
+     <Include>load_element.xml</Include>
+
+     <Constant Name="LoadElementX">0</Constant>
+     <Constant Name="LoadElementY">0</Constant>
+     <Constant Name="LoadElementName">#{PARAM_SIM_PRE_NAME}_#{PARAM_MODEL_PRE_NAME}_RPC08</Constant>
+     <Constant Name="LoadElementLabel">O2 High\nSol Valve</Constant>
+     <Constant Name="LoadElementGraphic">sol_valve</Constant>
+     <Include>load_element.xml</Include>
+
+   </Container>
+
+</Dummy>

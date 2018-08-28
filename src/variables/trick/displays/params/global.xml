@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Dummy>
+
+    <!-- Simulation specific parameters -->
+    <Include>include/basic_params.xml</Include>
+
+
+    <!-- ********** MPCV GNC Display Variables ********** -->
+    <Constant Name="PARAM_SIM_PRE_NAME">MPCV</Constant>
+    <Include>${dcappDisplayHome}/modules/nexsys_common/params/gnc_params.xml</Include>
+    <Variable Type="Integer">MPCV_AUTO_DOCK_IND</Variable>
+    <Variable Type="Integer">MPCV_AUTO_DOCK_CMD</Variable>
+
+
+    <!-- ********** PM GNC Display Variables ********** -->
+    <Constant Name="PARAM_SIM_PRE_NAME">PM</Constant>
+    <Include>${dcappDisplayHome}/modules/nexsys_common/params/gnc_params.xml</Include>
+
+
+    <!-- ********** Robotic and Door pages ********** -->
+    <!-- Robo Display Variables -->
+    <Include>${dcappDisplayHome}/modules/nexsys_common/params/robo_params.xml</Include>
+    <!-- Door Display variables -->
+    <Include>include/door_params.xml</Include>
+
+
+    <!-- ********** Stack subsystem variables ********** -->
+    <Include>include/stack_subsystem_params.xml</Include>
+
+
+    <!-- ********** Camera and Lights pages ********** -->
+    <!-- Cameras Display Variables -->
+    <Include>${dcappDisplayHome}/modules/mmsev/params/mmsev_camera_params.xml</Include>
+    <!-- Lights Display Variables -->
+    <Include>include/lights_params.xml</Include>
+    <!-- AerCam Display Variables -->
+    <Include>${dcappDisplayHome}/modules/mmsev/params/mmsev_aercam_params.xml</Include>
+    <!-- Telescope Variables -->
+    <Include>include/telescope_params.xml</Include>
+
+
+    <!-- ********** Remote Operation ********** -->
+    <!-- DCAPP parameters for Rover sim -->
+    <Include>include/rover_params.xml</Include>
+    <!-- DCAPP parameters for LLT sim -->
+    <Include>include/llt_params.xml</Include>
+
+</Dummy>

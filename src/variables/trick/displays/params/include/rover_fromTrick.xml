@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<FromTrick>
+    <TrickVariable Name="dynamics.mbdyn.poi[5].r_display_to_poi[0]" Units="m">ROVER_RELPOR_X_POS</TrickVariable>
+    <TrickVariable Name="dynamics.mbdyn.poi[5].r_display_to_poi[1]" Units="m">ROVER_RELPOR_Y_POS</TrickVariable>
+    <TrickVariable Name="dynamics.mbdyn.poi[5].r_display_to_poi[2]" Units="m">ROVER_RELPOR_Z_POS</TrickVariable>
+    <TrickVariable Name="rover_control.roverVel[0]" Units="m/s">ROVER_RELPOR_X_VEL</TrickVariable>
+    <TrickVariable Name="rover_control.roverVel[1]" Units="m/s">ROVER_RELPOR_Y_VEL</TrickVariable>
+    <TrickVariable Name="rover_control.roverVel[2]" Units="m/s">ROVER_RELPOR_Z_VEL</TrickVariable>
+    <TrickVariable Name="rover_control.range" Units="m">ROVER_POR_RANGE</TrickVariable>
+    <TrickVariable Name="rover_control.roverRateAvg" Units="m/s">ROVER_POR_RANGE_RATE</TrickVariable>
+    <TrickVariable Name="rover_LF_wheel.node[0].joint_out.joint_rate[0]" Units="revolution/min">ROVER_LF_WHEEL_RATE</TrickVariable>
+    <TrickVariable Name="rover_LB_wheel.node[0].joint_out.joint_rate[0]" Units="revolution/min">ROVER_LR_WHEEL_RATE</TrickVariable>
+    <TrickVariable Name="rover_RF_wheel.node[0].joint_out.joint_rate[0]" Units="revolution/min">ROVER_RF_WHEEL_RATE</TrickVariable>
+    <TrickVariable Name="rover_RB_wheel.node[0].joint_out.joint_rate[0]" Units="revolution/min">ROVER_RR_WHEEL_RATE</TrickVariable>
+    <TrickVariable Name="camera.pan" Units="d">ROVER_CAMERA_PAN</TrickVariable>
+    <TrickVariable Name="camera.tilt" Units="d">ROVER_CAMERA_TILT</TrickVariable>
+    <TrickVariable Name="camera.zoom">ROVER_CAMERA_ZOOM</TrickVariable>
+    <TrickVariable Name="rover_body.pfix.state.ellip_coords.latitude" Units="d">ROVER_LATITUDE</TrickVariable>
+    <TrickVariable Name="rover_body.pfix.state.ellip_coords.longitude" Units="d">ROVER_LONGTITUDE</TrickVariable>
+    <TrickVariable Name="rover_body.pfix.state.ellip_coords.altitude" Units="m">ROVER_ALTITUDE</TrickVariable>
+    <TrickVariable Name="rover_control.inCruiseControl">ROVER_CRUISE_CONTROL_IND</TrickVariable>
+    <TrickVariable Name="trick_sys.sched.mode">ROVER_SIM_MODE</TrickVariable>
+</FromTrick>

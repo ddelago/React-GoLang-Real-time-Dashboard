@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Dummy>
+
+  <TrickVariable Name="hab_subsystems.fswIf.tlm.eclss.cabin.deckHatch.openFlag">AIRLOCK_TO_EAM_HATCH_OPEN_IND</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.tlm.eclss.cabin.evaHatch.openFlag">AIRLOCK_TO_SPACE_HATCH_OPEN_IND</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.tlm.eclss.cabin.imv3.openFlag">AIRLOCK_AFT_IMV_POS_IND</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.tlm.eclss.cabin.manualVentValve.flowRate" Units="lb/hr">AIRLOCK_TO_SPACE_MAN_VENT_FLOW_RATE</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.tlm.eclss.cabin.manualVentValve.openFlag">AIRLOCK_TO_SPACE_MAN_VENT_POS_IND</TrickVariable>
+  <TrickVariable Name="hal_subsystems.fswIf.tlm.eclss.cabin.imv3.volFlowRate" Units="ft3/min">AIRLOCK_AFT_IMV_FLOW_RATE</TrickVariable>
+
+  <!-- Cabin general info from Trick -->
+  <Constant Name="PARAM_SIM_PRE_NAME">AIRLOCK</Constant>
+  <Constant Name="TRICK_SIM_PRE_NAME">hal_subsystems.fswIf.tlm.eclss.cabin.atmosphere</Constant>
+  <Include>${dcappDisplayHome}/modules/subsystems/params/cabin_info_fromTrick.xml</Include>
+
+</Dummy>

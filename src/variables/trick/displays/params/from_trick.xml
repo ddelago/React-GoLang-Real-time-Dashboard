@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<FromTrick>
+    <TrickVariable Name="trick_sys.sched.mode">SIM_MODE</TrickVariable>
+    <TrickVariable Name="jeod_time.time_utc.trunc_julian_time">TRUNCATED_JULIAN_DAY</TrickVariable>
+
+    <!-- ********** MPCV GNC Display Variables ********** -->
+    <If Value="#MpcvGncPageActive">
+      <Constant Name="PARAM_SIM_PRE_NAME">MPCV</Constant>
+      <Constant Name="TRICK_SIM_PRE_NAME">mpcv_gnc</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/gnc_fromTrick.xml</Include>
+      <Constant Name="TRICK_SIM_PRE_NAME">mpcv</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/hware_if_fromTrick.xml</Include>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/states_fromTrick.xml</Include>
+      <Constant Name="TRICK_SIM_PRE_NAME">mpcv_gnc_simct_interface</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/gnc_simct_fromTrick.xml</Include>
+      <Constant Name="TRICK_SIM_PRE_NAME">mpcv_hand_control</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/hand_control_fromTrick.xml</Include>
+      <TrickVariable Name="rendezvous.control.auto_control">#{PARAM_SIM_PRE_NAME}_AUTO_DOCK_IND</TrickVariable>
+    </If>
+
+    <!-- ********** PM GNC Display Variables ********** -->
+    <If Value="#PmGncPageActive">
+      <Constant Name="PARAM_SIM_PRE_NAME">PM</Constant>
+      <Constant Name="TRICK_SIM_PRE_NAME">pm_gnc</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/gnc_fromTrick.xml</Include>
+      <Constant Name="TRICK_SIM_PRE_NAME">pm</Constant>
+    <!--    <Include>${dcappDisplayHome}/modules/nexsys_common/params/hware_if_fromTrick.xml</Include> -->
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/states_fromTrick.xml</Include>
+      <Constant Name="TRICK_SIM_PRE_NAME">pm_gnc_simct_interface</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/gnc_simct_fromTrick.xml</Include>
+      <Constant Name="TRICK_SIM_PRE_NAME">pm_hand_control</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/hand_control_fromTrick.xml</Include>
+    </If>
+
+    <!-- ********** Robotic and Door pages ********** -->
+    <If Value="#RoboticPageActive">
+      <!-- Robotic display parameters -->
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/robo_fromTrick.xml</Include>
+      <!-- HAL Door display parameters -->
+      <Include>include/door_fromTrick.xml</Include>
+    </If>
+
+    <!-- ********** Stack subsystem variables ********** -->
+    <If Value="#SubsystemPageActive">
+      <Include>include/stack_subsystem_fromTrick.xml</Include>
+    </If>
+
+    <!-- ********** Camera and Lights pages ********** -->
+    <If Value="#CameraPageActive">
+      <!-- Telescope Display Parameters -->
+      <Include>include/telescope_fromTrick.xml</Include>
+      <!-- AerCam Display Parameters -->
+      <Include>${dcappDisplayHome}/modules/mmsev/params/mmsev_aercam_fromTrick.xml</Include>
+    </If>
+
+</FromTrick>

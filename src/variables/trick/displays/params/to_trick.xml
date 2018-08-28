@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<ToTrick>
+    <TrickVariable Name="sim_graphics_sync.graphics2sim_connected">GRAPHICS_ACTIVE</TrickVariable>
+    <If Value="#HcActive">
+        <TrickVariable Name="inputDeviceManager.#{SideSpec}ControlUnit.activationCommand">HC_MODE</TrickVariable>
+    </If>
+
+
+    <!-- ********** MPCV GNC Display Variables ********** -->
+    <If Value="#MpcvGncPageActive">
+      <Constant Name="PARAM_SIM_PRE_NAME">MPCV</Constant>
+      <Constant Name="TRICK_SIM_PRE_NAME">mpcv_gnc</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/gnc_toTrick.xml</Include>
+      <Constant Name="TRICK_SIM_PRE_NAME">mpcv_hware_sim_interface</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/hware_if_toTrick.xml</Include>
+      <Constant Name="TRICK_SIM_PRE_NAME">mpcv_hand_control</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/hand_control_toTrick.xml</Include>
+      <TrickVariable Name="rendezvous.control.auto_control">#{PARAM_SIM_PRE_NAME}_AUTO_DOCK_CMD</TrickVariable>
+    </If>
+
+    <!-- ********** PM GNC Display Variables ********** -->
+    <If Value="#PmGncPageActive">
+      <Constant Name="PARAM_SIM_PRE_NAME">PM</Constant>
+      <Constant Name="TRICK_SIM_PRE_NAME">pm_gnc</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/gnc_toTrick.xml</Include>
+      <!-- <Constant Name="TRICK_SIM_PRE_NAME">pm_hware_sim_interface</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/hware_if_toTrick.xml</Include> -->
+      <Constant Name="TRICK_SIM_PRE_NAME">pm_hand_control</Constant>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/hand_control_toTrick.xml</Include>
+    </If>
+
+    <!-- ********** Robotic and Door pages ********** -->
+    <If Value="#RoboticPageActive">
+      <!-- Robotic display parameters -->
+      <Include>${dcappDisplayHome}/modules/nexsys_common/params/robo_toTrick.xml</Include>
+      <!-- HAL Door Display Parameters -->
+      <Include>include/door_toTrick.xml</Include>
+    </If>
+
+    <!-- ********** Stack subsystem variables ********** -->
+    <If Value="#SubsystemPageActive">
+      <Include>include/stack_subsystem_toTrick.xml</Include>
+    </If>
+
+    <!-- ********** Camera and Lights pages ********** -->
+    <If Value="#CameraPageActive">
+      <!-- Telescope Display Parameters -->
+      <Include>include/telescope_toTrick.xml</Include>
+      <!-- AerCam Display Parameters -->
+      <Include>${dcappDisplayHome}/modules/mmsev/params/mmsev_aercam_toTrick.xml</Include>
+    </If>
+
+   
+</ToTrick>

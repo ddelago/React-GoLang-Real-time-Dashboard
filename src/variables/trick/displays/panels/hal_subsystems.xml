@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Dummy>
+
+  <Panel DisplayIndex="#HalSubsystemOverviewDisplay" BackgroundColor="#BgColor" VirtualWidth="#PanelWidth" VirtualHeight="#PanelHeight">
+      <Constant Name="PARAM_SIM_PRE_NAME">HAL</Constant>
+      <Include>${dcappDisplayHome}/modules/hal/panels/hal_system_overview.xml</Include>
+      <Include>include/halSubsTopMenu.xml</Include>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/panels/standard_elements.xml</Include>
+  </Panel>
+
+  <Constant Name="ExtraPdu">1</Constant>
+  <Constant Name="PARAM_SIM_PRE_NAME">HAL_AMPS</Constant>
+  <Include>hal_amps.xml</Include>
+
+  <Constant Name="PARAM_SIM_PRE_NAME">HAL</Constant>
+  <Include>hal_wms.xml</Include>
+
+  <Panel DisplayIndex="#HalTcsDisplay" BackgroundColor="#BgColor" VirtualWidth="#PanelWidth" VirtualHeight="#PanelHeight">
+      <Include>${dcappDisplayHome}/modules/hal/panels/hal_tcs.xml</Include>
+      <Include>include/halSubsTopMenu.xml</Include>
+      <Include>${dcappDisplayHome}/modules/nexsys_common/panels/standard_elements.xml</Include>
+  </Panel>
+
+  <Include>hal_air.xml</Include>
+
+</Dummy>

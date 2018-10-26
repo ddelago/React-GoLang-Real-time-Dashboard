@@ -1,4 +1,0 @@
-<?xml version="1.0"?>
-<ToTrick>
-  <TrickVariable Name="camera.reset">ROVER_CAMERA_RESET_CMD</TrickVariable>
-</ToTrick>

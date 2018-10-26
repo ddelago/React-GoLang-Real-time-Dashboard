@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<Dummy>
-  <TrickVariable Name="sciences.telescope.output_mode">TELESCOPE_MODE_IND</TrickVariable>
-  <TrickVariable Name="sciences.telescope.azimuth" Units="degree">TELESCOPE_AZIMUTH_IND</TrickVariable>
-  <TrickVariable Name="sciences.telescope.elevation" Units="degree">TELESCOPE_ELEVATION_IND</TrickVariable>
-  <TrickVariable Name="sciences.telescope.zoom_level">TELESCOPE_ZOOM_IND</TrickVariable>
-  <TrickVariable Name="sciences.time_counter_of_meteoroid_impact">TIME_TO_METEOROID_IMPACT</TrickVariable>
-  <TrickVariable Name="sciences.interest_object_id">TELESCOPE_OBJECT_IND</TrickVariable>
-</Dummy>

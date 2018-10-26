@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<Dummy>
-
-  <TrickVariable Name="hab_subsystems.fswIf.nominalCmd.eclss.cabin.deckHatch.openFlag">AIRLOCK_TO_EAM_HATCH_OPEN_CMD</TrickVariable>
-  <TrickVariable Name="hal_subsystems.fswIf.nominalCmd.eclss.cabin.evaHatch.openFlag">AIRLOCK_TO_SPACE_HATCH_OPEN_CMD</TrickVariable>
-  <TrickVariable Name="hal_subsystems.fswIf.nominalCmd.eclss.cabin.manualVentValve.openFlag">AIRLOCK_TO_SPACE_MAN_VENT_POS_CMD</TrickVariable>
-  <TrickVariable Name="hal_subsystems.fswIf.nominalCmd.eclss.cabin.imv3.openFlag">AIRLOCK_AFT_IMV_POS_CMD</TrickVariable>
-
-</Dummy>

@@ -2,7 +2,7 @@
 
 ![](images/DashboardHome.png)
 
-**Simulation Monitor** is a web-based monitoring tool to be used for any NExSyS simulation. For background on the project see [here](https://drive.google.com/open?id=13PfHKjtYUtsJQI2PvytLx_p_4slD7lnW) (NOTE that the screenshots in the presentation are out of date but the information is correct). The application uses Golang for its back-end and React for its front-end. The only tools that you will need to get it running are Trick (of course), Golang, Nodejs, npm, and the repositories for the NExSyS simulations (which is where you should viewing this).
+**Simulation Monitor** is a web-based monitoring tool to be used for any NExSyS simulation. For background on the project see [here](https://drive.google.com/open?id=13PfHKjtYUtsJQI2PvytLx_p_4slD7lnW) (NOTE that the screenshots in the presentation are out of date but the information is correct). The application uses Golang for its back-end and React for its front-end. The only tools that you will need to get it running are Trick (of course), Golang, Nodejs, and npm.
 
 
 ## Terminal Commands
@@ -12,7 +12,7 @@
 3. Open Terminal
 4. Go to your Go workspace directory
 5. Clone the repository. Filepath should be: ```~/{Your Go Workspace}/src/```
-6. cd into the nexsysSimMonitor project directory
+6. cd into the project directory
 7. Run in terminal: ```npm install``` to install all dependencies.
 8. You can now either run ```go run server.go address:port``` then ```npm start``` so that you can view live changes quickly in-browser or you can cd into /src and run ```npm run build``` to create an optimized version of the project. To view the optimized version run ```go run server.go address:port``` and navigate to the specific address and port that you provided in a web browser.
 9. **NOTE** that you must change the socket variable on line 585 of ```~/{Your Go Workspace}/src/nexsysSimMonitor/src/variables/Variables.jsx``` to reflect the address and port that you specified for the server.

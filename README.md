@@ -1,8 +1,8 @@
-# NExSyS Simulation Monitor
+# Simulation Monitor
 
 ![](images/DashboardHome.png)
 
-**NExSyS Sim Monitor** is a web-based monitoring tool to be used for any NExSyS simulation. For background on the project see [here](https://drive.google.com/open?id=13PfHKjtYUtsJQI2PvytLx_p_4slD7lnW) (NOTE that the screenshots in the presentation are out of date but the information is correct). The application uses Golang for its back-end and React for its front-end. The only tools that you will need to get it running are Trick (of course), Golang, Nodejs, npm, and the repositories for the NExSyS simulations (which is where you should viewing this).
+**Simulation Monitor** is a web-based monitoring tool to be used for any NExSyS simulation. For background on the project see [here](https://drive.google.com/open?id=13PfHKjtYUtsJQI2PvytLx_p_4slD7lnW) (NOTE that the screenshots in the presentation are out of date but the information is correct). The application uses Golang for its back-end and React for its front-end. The only tools that you will need to get it running are Trick (of course), Golang, Nodejs, npm, and the repositories for the NExSyS simulations (which is where you should viewing this).
 
 
 ## Terminal Commands
